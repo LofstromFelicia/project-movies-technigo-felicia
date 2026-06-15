@@ -29,6 +29,39 @@ body::before {
   z-index: 100;
 }
 
+h1,
+h2,
+h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+.global-header .logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-nav a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #cccccc;
+  transition: color 0.2s;
+}
+
+.movie-info h3 {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -312,4 +345,428 @@ RESPONSIVENESS FOR DETAIL PAGE
   .text-side h1 {
     font-size: 2rem;
   }
+}
+
+/* ======================================
+HEADER & FOOTER LAYOUT 
+========================================= */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.global-header {
+  background-color: #0b0b0b;
+  border-bottom: 2px solid #b3001e;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.header-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.global-header .logo {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.premium-tag {
+  font-size: 0.65rem;
+  background-color: #b3001e;
+  color: #ffffff;
+  padding: 3px 6px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header-nav a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #cccccc;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover {
+  color: #ff3344;
+}
+
+.global-footer {
+  background-color: #0b0b0b;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #888888;
+  font-size: 0.9rem;
+}
+
+.footer-subtext {
+  font-size: 0.75rem;
+  color: #555555;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .global-header {
+    padding: 15px 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .global-header .logo {
+    font-size: 2.5rem;
+  }
+
+  .header-nav {
+    gap: 20px;
+  }
+}
+
+/* =====================================
+BILJETTBOKNING (MODAL & BILJETT) 
+========================================*/
+.buy-ticket-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background-color: #b3001e;
+  color: #ffffff;
+  border: none;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(179, 0, 30, 0.4);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.buy-ticket-btn:hover {
+  background-color: #d60024;
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-container {
+  background-color: #1a1a1a;
+  border: 2px solid #b3001e;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  color: #fffffff;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  color: #ffffff;
+}
+
+.modal-booking h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.salong-info {
+  color: #b3001e;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.ticket-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  min-width: 25px;
+  text-align: center;
+}
+
+.ticket-picker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #262626;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #111111;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+.counter-btn {
+  background: #b3001e;
+  color: #ffffff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.counter-btn:hover:not(:disabled) {
+  background-color: #d60024;
+  transform: scale(1.05);
+}
+
+.counter-btn:disabled {
+  background-color: #333333;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.counter-box button {
+  background: #b3001e;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.counter-box button:disabled {
+  background: #444;
+  cursor: not-allowed;
+}
+
+.counter-box span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 20px;
+  text-align: center;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 0 5px;
+}
+
+.confirm-purchase-btn,
+.done-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
+  background-color: #b3001e;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.success-badge {
+  background-color: #2e7d32;
+  color: white;
+  width: fit-content;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0 auto 15px auto;
+}
+
+.modal-ticket-success {
+  text-align: center;
+}
+
+.modal-ticket-success {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.cinema-ticket {
+  background-color: #fff6e5;
+  color: #111111;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.cinema-ticket::before,
+.cinema-ticket::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  width: 20px;
+  height: 20px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.cinema-ticket::before {
+  left: -10px;
+}
+
+.cinema-ticket::after {
+  right: -10px;
+}
+
+.ticket-header {
+  background-color: #b3001e;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed #fff6e5;
+}
+
+.ticket-header h3 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.ticket-body {
+  padding: 20px;
+}
+
+.ticket-body h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+.ticket-body p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.ticket-code {
+  margin-top: 15px;
+  font-size: 1rem !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+
+/* Barcode effect */
+.ticket-qr {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.barcode {
+  width: 100%;
+  height: 40px;
+  background: repeating-linear-gradient(90deg,
+      #111,
+      #111 2px,
+      transparent 2px,
+      transparent 7px,
+      #111 7px,
+      #111 9px,
+      transparent 9px,
+      transparent 12px);
+}
+
+.ticket-instructions {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.picker-label-side {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.picker-label-side label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.price-per-ticket {
+  font-size: 0.8rem;
+  color: #888888;
 }
