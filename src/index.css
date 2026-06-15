@@ -10,7 +10,7 @@ GLOBAL STYLING & BASE
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #1a1a1a;
+  background-color: #111111;
   color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -36,32 +36,6 @@ h3 {
   letter-spacing: 2px;
 }
 
-.global-header .logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  font-weight: normal;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.header-nav a {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-  color: #cccccc;
-  transition: color 0.2s;
-}
-
-.movie-info h3 {
-  font-size: 1.6rem;
-  line-height: 1;
-  margin-bottom: 5px;
-  color: #ffffff;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -76,7 +50,7 @@ a {
   min-height: 100vh;
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: #1a1a1a;
+  background-color: #111111;
   color: #ffcc00;
 }
 
@@ -143,7 +117,8 @@ START PAGE & FILM GRID
 }
 
 .movie-info h3 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  line-height: 1;
   margin-bottom: 5px;
   color: #ffffff;
 }
@@ -203,10 +178,9 @@ DETAIL SITE (MOVIE DETAIL)
 .movie-detail-page {
   min-height: 100vh;
   position: relative;
-  background-color: #111;
+  background-color: #111111;
 }
 
-/* Return button */
 .back-button {
   position: absolute;
   top: 30px;
@@ -228,7 +202,6 @@ DETAIL SITE (MOVIE DETAIL)
   transform: translateX(-3px);
 }
 
-/* Hero section */
 .detail-hero {
   min-height: 100vh;
   display: flex;
@@ -379,9 +352,10 @@ HEADER & FOOTER LAYOUT
 }
 
 .global-header .logo {
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 1px;
+  font-weight: normal;
+  letter-spacing: 2px;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -405,8 +379,9 @@ HEADER & FOOTER LAYOUT
 }
 
 .header-nav a {
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
   color: #cccccc;
   transition: color 0.2s;
 }
@@ -503,7 +478,7 @@ BILJETTBOKNING (MODAL & BILJETT)
   width: 90%;
   position: relative;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
-  color: #fffffff;
+  color: #ffffff;
 }
 
 .close-modal-btn {
@@ -533,14 +508,7 @@ BILJETTBOKNING (MODAL & BILJETT)
   margin-bottom: 30px;
 }
 
-.ticket-amount {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  min-width: 25px;
-  text-align: center;
-}
-
+/* Biljetträknare - Pillboxlayout */
 .ticket-picker {
   display: flex;
   justify-content: space-between;
@@ -550,6 +518,24 @@ BILJETTBOKNING (MODAL & BILJETT)
   border-radius: 8px;
   margin-bottom: 25px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.picker-label-side {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.picker-label-side label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.price-per-ticket {
+  font-size: 0.8rem;
+  color: #888888;
 }
 
 .counter-box {
@@ -588,27 +574,11 @@ BILJETTBOKNING (MODAL & BILJETT)
   cursor: not-allowed;
 }
 
-.counter-box button {
-  background: #b3001e;
-  color: white;
-  border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.counter-box button:disabled {
-  background: #444;
-  cursor: not-allowed;
-}
-
-.counter-box span {
-  font-size: 1.4rem;
-  font-weight: bold;
-  width: 20px;
+.ticket-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  min-width: 25px;
   text-align: center;
 }
 
@@ -646,11 +616,7 @@ BILJETTBOKNING (MODAL & BILJETT)
   margin: 0 auto 15px auto;
 }
 
-.modal-ticket-success {
-  text-align: center;
-}
-
-.modal-ticket-success {
+.modal-ticket-success h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
@@ -726,7 +692,7 @@ BILJETTBOKNING (MODAL & BILJETT)
   padding-top: 10px;
 }
 
-/* Barcode effect */
+/* CSS - Barcode */
 .ticket-qr {
   padding: 0 20px 20px 20px;
   display: flex;
@@ -751,22 +717,4 @@ BILJETTBOKNING (MODAL & BILJETT)
   font-size: 0.8rem;
   color: #888;
   margin-bottom: 20px;
-}
-
-.picker-label-side {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.picker-label-side label {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  color: #ffffff;
-}
-
-.price-per-ticket {
-  font-size: 0.8rem;
-  color: #888888;
 }
