@@ -11,6 +11,7 @@ export const App = () => {
           <Route path="/" element={<Home />} />
 
           {/* Dynamic route for every specific film based on TMDB-ID */}
+          <Route path="/movies/:id" element={<MovieDetail />} />
         </Routes>
       </main>
     </BrowserRouter>
