@@ -4,7 +4,7 @@ Welcome to **Lilla Biografen**, a cinema management and movie exploration applic
 
 This project was developed as part of a web development curriculum to demonstrate proficiency in React basics, asynchronous data fetching, dynamic routing, and responsive UI design.
 
-👉 **[LIVE DEMO LINK HERE - Replace this text with your Cloudflare link]**
+👉 **[LIVE DEMO LINK HERE - (https://project-movies-technigo-felicia.pages.dev)]**
 
 ---
 
